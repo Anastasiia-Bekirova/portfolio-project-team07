@@ -13,9 +13,6 @@ body {
   min-height: 0;
 }
 
-.about-me {
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -29,12 +26,27 @@ body {
   overflow: hidden;
 }
 
+.about-me {
+}
+
 .about-me-top {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 16px;
-  /* width: 1376px; */
+  margin-bottom: 96px;
+}
+
+@media screen and (min-width: 375px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1280px) {
+
 }
 
 .about-me-summary {
@@ -68,11 +80,11 @@ body {
 .about-me-acc {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
 }
 
 .about-me-acc-el {
-  
+  padding-bottom: 32px;
 }
 
 .about-me-acc-el-title {
@@ -87,18 +99,40 @@ body {
 .about-me-acc-el-trigger {
   background: none;
   border: none;
-  color: #fafafa;
+  color: rgba(250, 250, 250, 0.4);
   font-size: 16px;
   font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 8px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.about-me-acc-arr {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.about-me-acc-arr.is-hidden {
+  display: none;
 }
 
 .about-me-acc-el-descr-frame {
   display: none;
-  padding: 16px;
-  width: 612px;
+  margin-left: auto;
+  max-width: 612px;
 }
 
 .about-me-acc-el-descr {
@@ -112,5 +146,19 @@ body {
 }
 
 .about-me-acc-el.active .about-me-acc-el-descr-frame {
-  display: block; /* Показати контент при активному стані */
+  display: block;
+}
+
+.about-me-current {
+  position: relative;
+}
+
+.about-me-current::after {
+  width: 100%;
+  height: 1px;
+  background: rgba(250, 250, 250, 0.2);
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
