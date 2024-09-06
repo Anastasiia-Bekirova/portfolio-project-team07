@@ -1,0 +1,90 @@
+.work-together {
+  background-color: #1c1d20;
+  padding: 80px 0 196px 169px;
+}
+.wt-header-wrapper {
+  position: relative;
+  display: flex;
+  margin: 0;
+  width: 542px;
+  height: 146px;
+}
+.wt-img {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
+.wt-header {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+/* ! Переименовать  */
+.woowwowowo {
+  margin-left: 90px;
+}
+.word-work {
+  color: #ed3b44;
+}
+.wt-form {
+  display: flex;
+  align-items: baseline;
+}
+.wt-input {
+  border: none;
+  background-color: #1c1d20;
+  width: 390px;
+  height: 44px;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+.wt-input:first-child {
+  margin-right: 32px;
+}
+/* ! Удалить размер шрифта */
+.wt-input::placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+/* ! Удалить размер шрифта && падинг*/
+
+.wt-btn {
+  border: none;
+  padding: 0;
+  margin-left: 86px;
+  background-color: #ed3b44;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+.wt-btn:hover {
+  background-color: #e0373f;
+}
+.wt-address {
+  margin-top: 78px;
+}
+.wt-address-list {
+  display: flex;
+  gap: 8px;
+}
+/* ! Удалить размер шрифта */
+.wt-address-link {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 18px 32px;
+  width: 239px;
+  height: 55px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
