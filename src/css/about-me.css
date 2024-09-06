@@ -1,0 +1,116 @@
+@import url('accordion-js/dist/accordion.min.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1d20;
+  color: #fafafa;
+  font-family: 'Inter Tight';
+  padding: 32px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.about-me {
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.about-me-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  /* width: 1376px; */
+}
+
+.about-me-summary {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -1.14px;
+  text-transform: uppercase;
+  width: calc((100% - 16px) / 2);
+  padding: 64px 64px 436px 64px;
+  border-radius: 24px;
+  background: #242527;
+}
+
+.about-me-func {
+  color: #ed3b44;
+}
+
+.about-me-ws {
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.about-me-photo {
+  width: calc((100% - 16px) / 2);
+  height: auto;
+  object-fit: cover;
+  border-radius: 24px;
+  background: lightgray 50% / cover no-repeat;
+}
+
+.about-me-acc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-me-acc-el {
+  
+}
+
+.about-me-acc-el-title {
+  color: rgba(250, 250, 250, 0.4);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  text-transform: uppercase;
+}
+
+.about-me-acc-el-trigger {
+  background: none;
+  border: none;
+  color: #fafafa;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.about-me-acc-el-descr-frame {
+  display: none;
+  padding: 16px;
+  width: 612px;
+}
+
+.about-me-acc-el-descr {
+  color: #fafafa;
+  /* Desktop_tablet/Main text */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  margin-bottom: 32px;
+}
+
+.about-me-acc-el.active .about-me-acc-el-descr-frame {
+  display: block; /* Показати контент при активному стані */
+}
