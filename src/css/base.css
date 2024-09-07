@@ -1,18 +1,12 @@
 
- :root {
-   --font-family: "Inter Tight", sans-serif;
-   --background: #1c1d20;
-   --cards: #242527;
-   --arrow: #3b3b3b;
-   --button-text: #ed3b44;
-   --main-text: #fafafa;
- }
-
  html {
    scroll-behavior: smooth;
  }
 
 body {
+  font-family: "Inter Tight", sans-serif;
+  background: #1c1d20;
+  color: #fafafa;
   display: flex;
   flex-direction: column;
   min-width: 100vw;
@@ -55,5 +49,8 @@ img {
 
 main {
   flex-grow: 1;
+}
+address {
+  font-style: normal;
 }
 
