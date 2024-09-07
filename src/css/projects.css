@@ -28,6 +28,7 @@
 .swiper-container {
 }
 .project-swiper-container {
+  overflow: hidden;
 }
 
 .swiper-slide.project-swiper-slide {
@@ -44,7 +45,6 @@
   width: 100%;
 }
 .project-swiper-wrapper {
-  display: flex;
 }
 .swiper-slide {
   width: 100%;
