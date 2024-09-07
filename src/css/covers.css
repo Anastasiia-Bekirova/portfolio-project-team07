@@ -1,0 +1,108 @@
+.coversSection {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #1c1d20;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.coversMainContainer {
+  height: 508px;
+  background-image: url(../img/covers/covers-bg.png);
+  background-position: right -190px bottom -40px;
+  background-size: 950px;
+  overflow: hidden;
+}
+
+.coversListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transform: translate(0, -30%) rotate(15deg);
+}
+
+.coversList {
+  display: flex;
+  gap: 30px;
+}
+
+.coversPicturesContainer {
+  width: 282px;
+  height: 163px;
+  overflow: hidden;
+}
+
+.coversImage {
+  object-fit: contain;
+}
+
+.slideOn {
+  animation: moveRightLeft 7s ease-in-out infinite;
+}
+
+@keyframes moveRightLeft {
+  0% {
+    transform: translate(-20%, -20%);
+  }
+  50% {
+    transform: translate(20%, 20%);
+  }
+  100% {
+    transform: translate(-20%, -20%);
+  }
+}
+
+/* ============ TABLET ============ */
+
+@media screen and (min-width: 768px) {
+  .coversSection {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .coversMainContainer {
+    height: 960px;
+    background-position: right -290px bottom -170px;
+    background-size: 1750px;
+  }
+
+  .coversListContainer {
+    gap: 30px;
+  }
+
+  .coversList {
+    gap: 40px;
+  }
+
+  .coversPicturesContainer {
+    width: 544px;
+    height: 314px;
+  }
+}
+
+/* ============ DESKTOP ============ */
+
+@media screen and (min-width: 1440px) {
+  .coversSection {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+
+  .coversMainContainer {
+    background-position: right -320px bottom -320px;
+    background-size: 2050px;
+  }
+}
