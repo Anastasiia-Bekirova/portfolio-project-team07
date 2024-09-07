@@ -19,23 +19,23 @@ document.addEventListener('DOMContentLoaded', () => {
     accordionElements.forEach(el => {
       const arrowDown = el.querySelector('.arr-down');
       const arrowUp = el.querySelector('.arr-up');
-      
+
       if (el !== activeElement) {
         el.style.marginBottom = '0';
         arrowDown.classList.remove('is-hidden');
         arrowUp.classList.add('is-hidden');
+      } else {
+        const activePanel = activeElement.querySelector(
+          '.about-me-acc-el-descr-frame'
+        );
+        const activeArrowDown = activeElement.querySelector('.arr-down');
+        const activeArrowUp = activeElement.querySelector('.arr-up');
+
+        activeElement.style.marginBottom = `${activePanel.scrollHeight}px`;
+        activeArrowDown.classList.add('is-hidden');
+        activeArrowUp.classList.remove('is-hidden');
       }
     });
-
-    if (activeElement) {
-      const activePanel = activeElement.querySelector('.about-me-acc-el-descr-frame');
-      const activeArrowDown = activeElement.querySelector('.arr-down');
-      const activeArrowUp = activeElement.querySelector('.arr-up');
-      
-      activePanel.style.paddingBottom = `${activePanel.scrollHeight}px`;
-      activeArrowDown.classList.add('is-hidden');
-      activeArrowUp.classList.remove('is-hidden');
-    }
   };
 
   document.querySelectorAll('.about-me-acc-el-trigger').forEach(trigger => {
