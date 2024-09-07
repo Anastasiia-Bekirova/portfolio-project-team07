@@ -25,6 +25,7 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
+  margin-top: 4px;
 }
 .span-wt-header {
   margin-left: 52px;
@@ -38,9 +39,9 @@
   margin-top: 63px;
 }
 .wt-input {
-  padding: 0;
   border: none;
   background-color: #1c1d20;
+  color: #fafafa;
   width: 343px;
   height: 44px;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
@@ -114,6 +115,7 @@
     height: 70px;
   }
   .wt-header {
+    margin-top: 7px;
     font-size: 64px;
   }
   .wt-header-wrapper {
