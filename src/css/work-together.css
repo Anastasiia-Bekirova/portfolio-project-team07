@@ -1,49 +1,53 @@
-.work-together {
-  background-color: #1c1d20;
-  padding: 80px 0 196px 169px;
+.wt-background {
+  /* background-image: url('../img/glass-effect-2.png'); */
+  background-repeat: no-repeat;
 }
 .wt-header-wrapper {
   position: relative;
   display: flex;
-  margin: 0;
-  width: 542px;
-  height: 146px;
+  width: 267px;
 }
 .wt-img {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
 }
 .wt-header {
   font-weight: 500;
-  font-size: 64px;
+  font-size: 40px;
   line-height: 100%;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
 }
-/* ! Переименовать  */
-.woowwowowo {
-  margin-left: 90px;
+.span-wt-header {
+  margin-left: 52px;
 }
 .word-work {
   color: #ed3b44;
 }
+/** Форма */
 .wt-form {
-  display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  margin-top: 63px;
 }
 .wt-input {
+  padding: 0;
   border: none;
   background-color: #1c1d20;
-  width: 390px;
+  width: 343px;
   height: 44px;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
-.wt-input:first-child {
-  margin-right: 32px;
+.wt-input:hover,
+.wt-input:focus {
+  outline: none;
+  border-color: #fafafa;
 }
-/* ! Удалить размер шрифта */
+.wt-input:first-child {
+  margin-bottom: 16px;
+}
 .wt-input::placeholder {
   font-weight: 500;
   font-size: 16px;
@@ -51,40 +55,97 @@
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
 }
-/* ! Удалить размер шрифта && падинг*/
 
+/** Кнопка Send */
 .wt-btn {
-  border: none;
   padding: 0;
-  margin-left: 86px;
+  border: none;
   background-color: #ed3b44;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 100px;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
   color: #fafafa;
+  margin-top: 32px;
 }
 .wt-btn:hover {
   background-color: #e0373f;
 }
+/** Контакты */
 .wt-address {
-  margin-top: 78px;
+  margin-top: 64px;
 }
 .wt-address-list {
   display: flex;
-  gap: 8px;
+  gap: 4px;
 }
-/* ! Удалить размер шрифта */
 .wt-address-link {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
-  padding: 18px 32px;
-  width: 239px;
-  height: 55px;
+  padding: 10px 12px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: -0.02em;
   color: #fafafa;
+}
+.wt-address-link:hover,
+.wt-address-link:focus {
+  border-color: #fafafa;
+}
+/** Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .wt-img {
+    width: 70px;
+    height: 70px;
+  }
+  .wt-header {
+    font-size: 64px;
+  }
+  .wt-header-wrapper {
+    width: 532px;
+  }
+  .span-wt-header {
+    margin-left: 90px;
+  }
+  .wt-form {
+    margin-top: 18px;
+    display: flex;
+    align-items: baseline;
+  }
+  .wt-input {
+    width: 245px;
+  }
+  .wt-input:first-child {
+    margin-bottom: 0px;
+    margin-right: 32px;
+  }
+  .wt-btn {
+    margin-top: 0;
+    margin-left: 32px;
+    width: 150px;
+    height: 150px;
+  }
+  .wt-address {
+    margin-top: 18px;
+  }
+  .wt-address-list {
+    gap: 8px;
+  }
+  .wt-address-link {
+    padding: 18px 32px;
+  }
+}
+/** Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .work-together {
+    padding-left: 196px;
+  }
+  .wt-input {
+    width: 390px;
+  }
+  .wt-btn {
+    margin-left: 86px;
+  }
 }
