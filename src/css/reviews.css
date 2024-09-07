@@ -81,8 +81,7 @@
   transition: stroke 0.3s ease;
 }
 
-.custom-prev:hover svg,
-.custom-next:hover svg {
+.arrow-next:hover {
   stroke: #3b3b3b;
 }
 
