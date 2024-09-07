@@ -1,6 +1,11 @@
-.wt-background {
-  /* background-image: url('../img/glass-effect-2.png'); */
+.work-together {
+  max-width: 375px;
+  margin: auto;
+  background-image: url('../img/glass-effect-mobail.png');
   background-repeat: no-repeat;
+  background-size: 85px 100%;
+  background-position: right;
+  /* background-color: #e0373f; */
 }
 .wt-header-wrapper {
   position: relative;
@@ -96,6 +101,14 @@
 }
 /** Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
+  .wt-wrapper {
+    padding-bottom: 196px;
+  }
+  .work-together {
+    max-width: 768px;
+    background-image: url('../img/glass-effect-tablet.png');
+    background-size: 198px 100%;
+  }
   .wt-img {
     width: 70px;
     height: 70px;
@@ -139,6 +152,11 @@
 }
 /** Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
+  .work-together {
+    max-width: 1440px;
+    background-image: url('../img/glass-effect-tablet.png');
+    background-size: 400px 100%;
+  }
   .work-together {
     padding-left: 196px;
   }
