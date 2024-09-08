@@ -29,7 +29,7 @@
 }
 
 .about-me {
-  /* padding */
+  padding-top: 64px;
 }
 
 .about-me-top {
@@ -44,9 +44,13 @@
 }
 
 @media screen and (min-width: 768px) {
+  
 }
 
 @media screen and (min-width: 1280px) {
+  .about-me {
+    padding-top: 96px;
+  }
 }
 
 .about-me-summary {
@@ -139,7 +143,6 @@
 
 .about-me-acc-el-descr {
   color: #fafafa;
-  /* Desktop_tablet/Main text */
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -202,7 +205,7 @@
   letter-spacing: -0.4px;
 }
 .about-me-swiper-slide-el-text.active {
-  background-color: #ed3b44; /* Red color for active */
+  background-color: #ed3b44; /* color for active */
   transform: scale(1.1); /* Scale up the active circle */
 }
 

@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevButton = document.querySelector('.about-me-swiper-btn-prev');
   const swiperContainer = document.querySelector('.about-me-swiper');
   const chosenSkill = document.querySelector('.about-me-swiper-slide-el-text');
-
+  
   const swiper = new Swiper(swiperContainer, {
     modules: [Navigation, Keyboard, Mousewheel],
     slidesPerView: 'auto',
