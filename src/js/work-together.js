@@ -1,55 +1,116 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const eventHandler = document.querySelector('.wt-btn');
-
-eventHandler.addEventListener('click', function () {
-  // Получение данных формы и создание объекта FormData
+document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.wt-form');
-  const formData = new FormData(form);
+  const emailInput = document.querySelector('.wt-input-js');
+  const emailMessage = document.querySelector('.message-input');
+  const modal = document.querySelector('.modal');
+  const closeModal = document.querySelector('.btn-close-modal');
 
-  // ! Добавить ссылку API
-  // Отправка POST-запроса
-  fetch('https://your-server-endpoint.com/api/collaboration', {
-    method: 'POST',
-    body: formData,
-  })
-    .then(response => {
-      if (response.ok) {
-        // Успешный ответ от сервера - показываем iziToast уведомление и модальное окно
-        iziToast.success({
-          title: 'Success',
-          message: 'Your request has been successfully submitted!',
-          position: 'center', // Сообщение по центру
-        });
-        document.querySelector('.modal').style.display = 'block'; // Показ модального окна
-        form.reset(); // Очистка формы
-      } else {
-        return response.json().then(errorData => {
-          throw new Error(errorData.message || 'An error occurred');
-        });
-      }
-    })
-    .catch(error => {
-      // Показ всплывающего сообщения об ошибке с помощью iziToast
-      iziToast.error({
-        title: 'Error',
-        message: error.message,
-        position: 'bottomCenter', // Сообщение под формой
-      });
-    });
-});
+  if (!form || !emailInput || !emailMessage || !modal || !closeModal) {
+    console.error('One or more required elements are missing.');
+    return;
+  }
 
-// Закрытие модального окна
-document
-  .querySelector('.btn-close-modal')
-  .addEventListener('click', function () {
-    document.querySelector('.modal').style.display = 'none';
+  // Обработчик ввода для emailInput
+  emailInput.addEventListener('input', () => {
+    const email = emailInput.value;
+    const emailValid = emailInput.checkValidity();
+    const emailEndsWithGmail = email.endsWith('@gmail.com');
+
+    if (email === '') {
+      // Очистка сообщения и стилей, если поле пустое
+      emailMessage.textContent = '';
+      emailMessage.className = 'message-input';
+      emailInput.classList.remove('error', 'success');
+    } else if (!emailValid || !emailEndsWithGmail) {
+      emailMessage.textContent = 'Invalid email, try again';
+      emailMessage.className = 'message-input error';
+      emailInput.classList.add('error');
+      emailInput.classList.remove('success');
+    } else {
+      emailMessage.textContent = 'Success!';
+      emailMessage.className = 'message-input success';
+      emailInput.classList.add('success');
+      emailInput.classList.remove('error');
+    }
   });
 
-// Закрытие модального окна по нажатию на клавишу Esc
-document.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
-    document.querySelector('.modal').style.display = 'none';
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const email = emailInput.value;
+    const emailValid = emailInput.checkValidity();
+    const emailEndsWithGmail = email.endsWith('@gmail.com');
+
+    if (!emailValid || !emailEndsWithGmail) {
+      emailMessage.textContent = 'Invalid email, try again';
+      emailMessage.className = 'message-input error';
+      emailInput.classList.add('error');
+      emailInput.classList.remove('success');
+      return;
+    }
+
+    emailMessage.textContent = 'Success!';
+    emailMessage.className = 'message-input success';
+    emailInput.classList.add('success');
+    emailInput.classList.remove('error');
+
+    try {
+      const response = await fetch('/your-endpoint', {
+        // замените '/your-endpoint' на ваш URL
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          comments: form.querySelector('input[type="text"]').value,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok.');
+      }
+
+      form.reset();
+      openModal();
+    } catch (error) {
+      iziToast.error({
+        title: 'Error',
+        message: 'Something went wrong. Please try again.',
+      });
+    }
+  });
+
+  function openModal() {
+    if (modal) {
+      modal.style.display = 'flex';
+    }
   }
+
+  function closeModalFunction() {
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+
+  if (closeModal) {
+    closeModal.addEventListener('click', closeModalFunction);
+  }
+
+  if (modal) {
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        closeModalFunction();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal) {
+      closeModalFunction();
+    }
+  });
 });
