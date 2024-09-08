@@ -22,10 +22,100 @@
     <script type="module" crossorigin src="/portfolio-project-team07/index.js"></script>
     <link rel="modulepreload" crossorigin href="/portfolio-project-team07/assets/vendor-CSjIQQqb.js">
     <link rel="stylesheet" crossorigin href="/portfolio-project-team07/assets/vendor-CTkdz8MY.css">
-    <link rel="stylesheet" crossorigin href="/portfolio-project-team07/assets/index-BxItmzxA.css">
+    <link rel="stylesheet" crossorigin href="/portfolio-project-team07/assets/index-DwqR9eQC.css">
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+  <div class="container header-container">
+    <a href="./index.html" class="header-img">
+      <picture>
+        <img
+          class="logo-image"
+          srcset="../img/logo-font.jpg 1x, ../img/logo-font@2x.jpg 2x"
+          src="/src/img/logo-font.jpg"
+          alt="logo"
+          width="80"
+          height="80"
+          loading="lazy"
+          title="logo"
+        />
+      </picture>
+      <div>
+        <svg class="name-icon" width="84" height="19">
+          <use href="../img/icons.svg#icon-jefferson"></use>
+        </svg>
+      </div>
+    </a>
+
+    <div class="header-navigation">
+      <button
+        class="navigation-menu-btn"
+        type="button"
+        aria-label="Menu button"
+      >
+        Menu
+      </button>
+
+      <div class="menu-list-box">
+        <ul class="menu-list visually-hidden">
+          <li class="menu-list-item">
+            <a href="#about-me" class="list-item-link">About me</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#benefits" class="list-item-link">Benefits</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#projects" class="list-item-link">Projects</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#faq-section" class="list-item-link">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="order-btn">
+      <a class="order-btn-link" href="#work-together">Order the project</a>
+    </div>
+
+    <button class="burger-btn" type="button" aria-label="Mobile menu button">
+      <svg class="burger-icon" width="28" height="28">
+        <use href="../img/icons.svg#icon-burger"></use>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Burger  -->
+
+  <div class="backdrop">
+    <div class="backdrop-menu is-open">
+      <button class="close-btn" type="button" aria-label="Close button">
+        <svg class="close-icon" width="28" height="28">
+          <use href="../img/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <ul class="backdrop-menu-list">
+        <li class="backdrop-menu-list-item">
+          <a href="#about-me" class="burger-list-item-link">About me</a>
+        </li>
+        <li class="backdrop-menu-list-item">
+          <a href="#benefits" class="burger-list-item-link">Benefits</a>
+        </li>
+        <li class="backdrop-menu-list-item">
+          <a href="#projects" class="burger-list-item-link">Projects</a>
+        </li>
+        <li class="backdrop-menu-list-item">
+          <a href="#faq-section" class="burger-list-item-link">FAQ</a>
+        </li>
+      </ul>
+      <div class="backdrop-order-btn-box">
+        <a class="backdrop-order-btn-link" href="#work-together"
+          >Order the project</a
+        >
+      </div>
+    </div>
+  </div>
+</header>
 
 
     <main>
