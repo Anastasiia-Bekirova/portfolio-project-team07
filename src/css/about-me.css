@@ -1,17 +1,19 @@
 @import url('accordion-js/dist/accordion.min.css');
+@import url('swiper/css');
+@import url('swiper/css/navigation');
 
 * {
   box-sizing: border-box;
 }
 
-body {
+/* body {
   background-color: #1c1d20;
   color: #fafafa;
   font-family: 'Inter Tight';
   padding: 32px;
   min-width: 0;
   min-height: 0;
-}
+} */
 
 .visually-hidden {
   position: absolute;
@@ -39,15 +41,12 @@ body {
 }
 
 @media screen and (min-width: 375px) {
-
 }
 
 @media screen and (min-width: 768px) {
-
 }
 
 @media screen and (min-width: 1280px) {
-
 }
 
 .about-me-summary {
@@ -82,6 +81,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-bottom: 96px;
 }
 
 .about-me-acc-el {
@@ -163,4 +163,59 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+.about-me-swiper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.about-me-swiper-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-swiper-slide-el {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-swiper-slide-el-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+  color: #fafafa;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+.about-me-swiper-slide-el-text.active {
+  background-color: #ed3b44; /* Red color for active */
+  transform: scale(1.1); /* Scale up the active circle */
+}
+
+.about-me-swiper-buttons {
+}
+
+.about-me-swiper-btn-prev,
+.about-me-swiper-btn-next {
+  color: rgba(59, 59, 59, 1);
+}
+
+.about-me-swiper-btn-next {
+}
+
+.about-me-swiper-svg {
 }
