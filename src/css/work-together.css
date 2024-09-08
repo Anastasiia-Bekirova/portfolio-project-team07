@@ -45,6 +45,9 @@
   width: 343px;
   height: 44px;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  white-space: nowrap;
+  overflow-wrap: hidden;
+  text-overflow: ellipsis;
 }
 .wt-input:hover,
 .wt-input:focus {
