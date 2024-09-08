@@ -1,0 +1,150 @@
+@media screen and (max-width: 767px) {
+    .benefits {
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 0 16px 32px 16px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.benefits-title {
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #FAFAFA66;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+}
+
+
+
+    .benefits-ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-bottom: 32px;
+    }
+
+    .benefits-list-items {
+        background-color: #242527;
+        border-radius: 20px;
+       
+            transition: transform 0.3s ease;
+    }
+    .benefits-list-items:hover{
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .benefits-icon {
+        width: 48px;
+        height: 48px;
+        background-color: #ED3B44;
+        border-radius: 10px;
+        margin-top: 14px;
+        margin-left: 24px;
+        margin-bottom: 64px;
+        padding: 12px;
+        fill: #FAFAFA;
+    }
+
+    .benefits-list-items-title {
+        font-family: Inter Tight;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        color: #FAFAFA;
+        margin-left: 24px;
+        margin-bottom: 8px;
+    }
+
+    .benefits-text{
+        font-family: Inter Tight;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        color: #FAFAFA99;
+        margin-left: 24px;
+        margin-right: 24px;
+        padding-bottom: 20px;
+    }
+
+    .order-link {
+        display: block;
+        width: 189px;
+        padding: 18px 36px;
+        border-radius: 60px;
+        border: 1px solid #FAFAFA33;
+        cursor: pointer;
+        font-family: Inter Tight;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.21;
+        letter-spacing: -0.02em;
+        color: #FAFAFA;
+        transition: border-color 250ms ease;
+    }
+
+    .order-link:hover,
+   .order-link:focus {
+        border-color: #fafafa;
+    }
+
+/* Планшети (з 768px) */
+@media screen and (min-width: 768px) {
+    .benefits {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 32px 32px 32px;
+    }
+
+    .benefits-ul {
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+    }
+
+    .benefits-list-items {
+        max-width: 344px;
+    
+    }
+}
+
+/* Десктоп (з 1440px) */
+@media screen and (min-width: 1440px) {
+    .benefits {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: block;
+        position: relative;       
+}
+
+    .benefits-title {
+        position: absolute;
+    }
+
+    .benefits-block{
+        padding-left: 694px;
+    }
+
+        .benefits-ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    
+        .benefits-list-items {
+            max-width: 332px;
+    
+        }
+
+}
