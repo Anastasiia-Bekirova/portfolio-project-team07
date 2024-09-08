@@ -1,11 +1,11 @@
 .section-reviews {
   min-width: 343px;
-  /* height: 442px; */
   font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
+  margin: 0 auto;
 }
 .reviews-container {
   overflow: hidden;
@@ -70,19 +70,10 @@
   transition: background-color 0.3s ease;
 }
 
-.custom-prev:hover,
-.custom-next:hover {
-  background-color: #fafafa;
-}
-
 .custom-prev svg,
 .custom-next svg {
   stroke: #fafafa;
   transition: stroke 0.3s ease;
-}
-
-.arrow-next:hover {
-  stroke: #3b3b3b;
 }
 
 .custom-prev {
@@ -96,7 +87,6 @@
 @media screen and (min-width: 768px) {
   .section-reviews {
     min-width: 704px;
-    height: 458px;
   }
   .author-review {
     max-width: 296px;
@@ -106,5 +96,8 @@
   .swiper-slide {
     width: 100%;
     height: 302px;
+  }
+  .reviews {
+    margin: 0 auto;
   }
 }
