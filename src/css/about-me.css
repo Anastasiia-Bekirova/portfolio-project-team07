@@ -1,17 +1,7 @@
 @import url('accordion-js/dist/accordion.min.css');
 
-* {
-  box-sizing: border-box;
-}
 
-body {
-  background-color: #1c1d20;
-  color: #fafafa;
-  font-family: 'Inter Tight';
-  padding: 32px;
-  min-width: 0;
-  min-height: 0;
-}
+
 
 .visually-hidden {
   position: absolute;
