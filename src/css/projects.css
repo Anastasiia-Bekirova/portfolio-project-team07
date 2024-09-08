@@ -41,7 +41,7 @@
     flex-direction: row;
   }
 }
-.swiper-wrapper {
+.swiper-wrapper.project-swiper-slide {
   width: 100%;
   height: 100%;
 }
