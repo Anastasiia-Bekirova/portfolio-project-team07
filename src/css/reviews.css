@@ -71,19 +71,10 @@
   transition: background-color 0.3s ease;
 }
 
-.custom-prev:hover,
-.custom-next:hover {
-  background-color: #fafafa;
-}
-
 .custom-prev svg,
 .custom-next svg {
   stroke: #fafafa;
   transition: stroke 0.3s ease;
-}
-
-.arrow-next:hover {
-  stroke: #3b3b3b;
 }
 
 .custom-prev {
