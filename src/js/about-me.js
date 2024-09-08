@@ -74,42 +74,76 @@ document.addEventListener('DOMContentLoaded', () => {
 //   // }
 // });
 
+// document.addEventListener('DOMContentLoaded', () => {
+//   const nextButton = document.querySelector('.about-me-swiper-btn-next');
+//   const prevButton = document.querySelector('.about-me-swiper-btn-prev');
+//   const swiper = new Swiper('.about-me-swiper', {
+//     modules: [Navigation, Keyboard, Mousewheel],
+//     slidesPerView: 'auto',
+//     spaceBetween: 20,
+//     navigation: {
+//       nextEl: '.about-me-swiper-btn-next',
+//       prevEl: '.about-me-swiper-btn-prev',
+//     },
+//     keyboard: {
+//       enabled: true,
+//       onlyInViewport: false,
+//     },
+//     mousewheel: true,
+
+//     on: {
+//       reachBeginning: function () {
+//         document
+//           .querySelector('.custom-prev')
+//           .classList.add('swiper-button-disabled');
+//       },
+//       reachEnd: function () {
+//         document
+//           .querySelector('.custom-next')
+//           .classList.add('swiper-button-disabled');
+//       },
+//       fromEdge: function () {
+//         document
+//           .querySelector('.custom-prev')
+//           .classList.remove('swiper-button-disabled');
+//         document
+//           .querySelector('.custom-next')
+//           .classList.remove('swiper-button-disabled');
+//       },
+//     },
+//   });
+// });
+
 document.addEventListener('DOMContentLoaded', () => {
   const nextButton = document.querySelector('.about-me-swiper-btn-next');
   const prevButton = document.querySelector('.about-me-swiper-btn-prev');
-  const swiper = new Swiper('.about-me-swiper', {
+  const swiperContainer = document.querySelector('.about-me-swiper');
+  const chosenSkill = document.querySelector('.about-me-swiper-slide-el-text');
+
+  const swiper = new Swiper(swiperContainer, {
     modules: [Navigation, Keyboard, Mousewheel],
     slidesPerView: 'auto',
     spaceBetween: 20,
+    loop: true,
     navigation: {
-      nextEl: '.about-me-swiper-btn-next',
-      prevEl: '.about-me-swiper-btn-prev',
+      nextEl: nextButton,
+      prevEl: prevButton,
     },
     keyboard: {
       enabled: true,
       onlyInViewport: false,
     },
     mousewheel: true,
-
-    on: {
-      reachBeginning: function () {
-        document
-          .querySelector('.custom-prev')
-          .classList.add('swiper-button-disabled');
-      },
-      reachEnd: function () {
-        document
-          .querySelector('.custom-next')
-          .classList.add('swiper-button-disabled');
-      },
-      fromEdge: function () {
-        document
-          .querySelector('.custom-prev')
-          .classList.remove('swiper-button-disabled');
-        document
-          .querySelector('.custom-next')
-          .classList.remove('swiper-button-disabled');
-      },
-    },
   });
+
+  function updateCirclePosition() {
+    const activeIndex = swiper.activeIndex;
+    const offsetX = activeIndex * 100;
+
+    chosenSkill.style.transform = `translateX(${offsetX}px, -50%)`;
+  }
+
+  swiper.on('slideChange', updateCirclePosition);
+
+  updateCirclePosition();
 });

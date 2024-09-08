@@ -2,9 +2,9 @@
 @import url('swiper/css');
 @import url('swiper/css/navigation');
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 /* body {
   background-color: #1c1d20;
@@ -173,7 +173,7 @@
   width: 100%;
 }
 
-.about-me-swiper-slide {
+.a-swiper-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
