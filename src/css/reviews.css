@@ -1,6 +1,5 @@
 .section-reviews {
   min-width: 343px;
-  height: 442px;
   font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -88,7 +87,6 @@
 @media screen and (min-width: 768px) {
   .section-reviews {
     min-width: 704px;
-    height: 458px;
   }
   .author-review {
     max-width: 296px;
