@@ -1,7 +1,7 @@
 .work-together {
   max-width: 375px;
   margin: auto;
-  background-image: url('../img/glass-effect-mobail.png');
+  background-image: url('/img/work-together/glass-effect-mobile.png');
   background-repeat: no-repeat;
   background-size: 85px 100%;
   background-position: right;
@@ -45,6 +45,9 @@
   width: 343px;
   height: 44px;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  white-space: nowrap;
+  overflow-wrap: hidden;
+  text-overflow: ellipsis;
 }
 .wt-input:hover,
 .wt-input:focus {
@@ -61,7 +64,28 @@
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
 }
+.message-input {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
+}
+.message-input.error {
+  color: #e74a3b;
+}
 
+.message-input.success {
+  color: #3cbc81;
+}
+
+.wt-input.error {
+  border-bottom: 1px solid #e74a3b;
+}
+
+.wt-input.success {
+  border-bottom: 1px solid #3cbc81;
+}
 /** Кнопка Send */
 .wt-btn {
   padding: 0;
@@ -78,6 +102,9 @@
 }
 .wt-btn:hover {
   background-color: #e0373f;
+}
+.wt-btn:active {
+  box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
 }
 /** Контакты */
 .wt-address {
@@ -102,13 +129,11 @@
 }
 /** Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
-  .wt-wrapper {
-    padding-bottom: 196px;
-  }
   .work-together {
     max-width: 768px;
-    background-image: url('../img/glass-effect-tablet.png');
+    background-image: url('/img/work-together/glass-effect-tablet.png');
     background-size: 198px 100%;
+    padding-bottom: 196px;
   }
   .wt-img {
     width: 70px;
@@ -156,7 +181,7 @@
 @media only screen and (min-width: 1440px) {
   .work-together {
     max-width: 1440px;
-    background-image: url('../img/glass-effect-tablet.png');
+    background-image: url('/img/work-together/glass-effect-desktop.png');
     background-size: 400px 100%;
   }
   .work-together {
