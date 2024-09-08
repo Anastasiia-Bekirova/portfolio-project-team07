@@ -1,0 +1,213 @@
+.title-faq {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #fafafa60;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .faq > .faq-container .title {
+      max-width: 100%;
+    }
+  }
+  
+  .faq > .faq-container .ac {
+    background: #1c1d20;
+    margin-top: 0;
+    border-bottom: 1px solid #fafafa20;
+    border-top: 1px solid #fafafa20;
+    border-left: none;
+    border-right: none;
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 1439px) {
+    .faq > .faq-container .ac {
+      width: calc(100% - 32px);
+    }
+  }
+  
+  .faq-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 344px;
+  }
+  
+  .faq > .faq-container .ac.is-active {
+    background: #1c1d20;
+  }
+  
+  .more-content {
+    position: relative;
+    min-width: 32px;
+    min-height: 32px;
+    border: 1px solid #fafafa20;
+    border-radius: 60px;
+    height: 32px;
+  }
+  
+  .first-line {
+    position: absolute;
+    top: 14px;
+    left: 7px;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    height: 2px;
+    width: 10px;
+    background-color: #fafafa;
+    transform: rotate(-45deg);
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  }
+  
+  .second-line {
+    position: absolute;
+    right: 7px;
+    top: 14px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    height: 2px;
+    width: 10px;
+    background-color: #fafafa;
+    transform: rotate(45deg);
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  }
+  
+  .ac.ac.is-active .first-line {
+    top: 15px;
+    transform: rotate(45deg);
+  }
+  
+  .ac.ac.is-active .second-line {
+    top: 15px;
+    transform: rotate(-45deg);
+  }
+  
+  .faq > .faq-container .ac .ac-trigger {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fafafa;
+    background: #1c1d20;
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .faq-questions {
+    max-width: 224px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .faq-questions {
+      max-width: 600px;
+    }
+  }
+  
+  .faq > .faq-container .ac.is-active > .ac-header .ac-trigger::after,
+  .faq > .faq-container .ac .ac-trigger::after {
+    content: '';
+  }
+  
+  .faq > .faq-container .ac .ac-panel .ac-text {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #fafafa60;
+    margin: 24px 24px 24px 0;
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1439px) {
+    .faq .title {
+      margin-bottom: 60px;
+    }
+  
+    .faq-container {
+      max-width: 704px;
+    }
+  }
+  
+  @media only screen and (min-width: 1440px) {
+    .faq .faq-container {
+      max-width: 1440px;
+      padding-left: 32px;
+    }
+  
+    .faq > .faq-container .border-center {
+      border-right: 1px solid #fafafa20;
+      padding-right: 32px;
+    }
+  
+    .indentation {
+      padding-left: 32px;
+    }
+  
+    .faq-accordion-container {
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      grid-auto-flow: column;
+      grid-auto-columns: 50% 50%;
+    }
+  }
+  
+  .faq-ac {
+    margin-top: 8px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+  
+  .faq-ac .faq-header {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .faq-ac .faq-btn {
+    font: bold 16px Arial, sans-serif;
+    color: #111;
+    text-align: left;
+    width: 100%;
+    padding: 8px 32px 8px 8px;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    transition: color 0.25s ease;
+    position: relative;
+    text-decoration: none;
+    margin: 0;
+    border: 0;
+  }
+  
+  .faq-ac .faq-btn::after {
+    content: '+';
+    text-align: center;
+    width: 15px;
+    transform: translate(0, -50%);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+  }
+  
+  .faq-ac .ac-panel {
+    overflow: hidden;
+    transition-property: height, visibility;
+    transition-timing-function: ease;
+  }
+  
+  .faq-ac.js-enabled .ac-panel {
+    visibility: hidden;
+  }
+  
+  .faq-ac.is-active .ac-panel {
+    visibility: visible;
+  }
+  
+  .faq-ac.is-active > .faq-header .faq-btn::after {
+    content: '–';
+  }
+  
