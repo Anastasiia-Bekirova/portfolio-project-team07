@@ -52,31 +52,28 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    emailMessage.textContent = 'Success!';
-    emailMessage.className = 'message-input success';
-    emailInput.classList.add('success');
-    emailInput.classList.remove('error');
-
     try {
-      const response = await fetch(
-        'https://portfolio-js.b.goit.study/api-docs',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email: email,
-            comments: form.querySelector('input[type="text"]').value,
-          }),
-        }
-      );
+      const response = await fetch('', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          comments: form.querySelector('input[type="text"]').value,
+        }),
+      });
 
       if (!response.ok) {
         throw new Error('Network response was not ok.');
       }
 
+      // Очистка формы, сообщения и стилей после успешной отправки
       form.reset();
+      emailMessage.textContent = '';
+      emailMessage.className = 'message-input';
+      emailInput.classList.remove('error', 'success');
+
       openModal();
     } catch (error) {
       iziToast.error({
