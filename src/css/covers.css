@@ -21,6 +21,7 @@
 .coversMainContainer {
   height: 508px;
   background-image: url('../img/covers/covers-bg.png');
+  background-repeat: no-repeat;
   background-position: right -190px bottom -40px;
   background-size: 950px;
   overflow: hidden;
@@ -43,6 +44,7 @@
   width: 282px;
   height: 163px;
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .coversImage {
@@ -55,13 +57,13 @@
 
 @keyframes moveRightLeft {
   0% {
-    transform: translate(-20%, -20%);
+    transform: translate(-25%, -25%);
   }
   50% {
-    transform: translate(20%, 20%);
+    transform: translate(25%, 25%);
   }
   100% {
-    transform: translate(-20%, -20%);
+    transform: translate(-25%, -25%);
   }
 }
 
