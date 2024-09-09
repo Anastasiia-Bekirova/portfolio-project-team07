@@ -177,9 +177,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border: none !important;
-  padding: 0 !important;
-  width: 130px !important;
+  border: none;
+  padding: 0;
+  width: 130px;
   height: 130px; 
   flex-shrink: 0;
 }
@@ -214,15 +214,15 @@
 }
 
 .about-me-swiper-slide-el-text {
-  position: relative !important;
-  z-index: 1 !important;
-  color: #fafafa !important;
-  font-size: 16px !important;
-  font-weight: 500 !important;
-  line-height: 24px !important;
-  line-height: normal !important;
-  letter-spacing: -0.32px !important;
-  text-align: center !important;
+  position: relative;
+  z-index: 1;
+  color: #fafafa;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  text-align: center;
 }
 
 .about-me-swiper-btn-next {
@@ -305,17 +305,17 @@
     gap: 55px;
   }
   .about-me-swiper-slide-el {
-    width: 200px !important;
-    height: 200px !important;
+    width: 200px;
+    height: 200px;
   }
   .about-me-swiper-slide-el-circle {
-    width: 200px !important;
-    height: 200px !important;
+    width: 200px;
+    height: 200px;
   }
   .about-me-swiper-slide-el-text {
-    font-size: 20px !important;
-    line-height: 30px !important;
-    letter-spacing: -0.4px !important;
+    font-size: 20px;
+    line-height: 30px ;
+    letter-spacing: -0.4px;
   }
   .about-me-swiper-svg {
     width: 40px;
