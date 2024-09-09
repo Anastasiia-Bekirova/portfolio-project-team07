@@ -45,9 +45,25 @@
   text-shadow: 0 0 12px #fafafa;
 }
 
+.hero-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 37px;
+}
+
 .hero-link-item-email {
   text-transform: none;
   width: 178px;
+}
+
+.hero-link-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 178px;
+  height: 37px;
 }
 
 @media screen and (max-width: 358px) {
@@ -80,9 +96,19 @@
     height: 55px;
   }
 
+  .hero-link {
+    width: 55px;
+    height: 55px;
+  }
+
   .hero-link-item-email {
     text-transform: none;
     width: 223px;
+  }
+
+  .hero-link-email {
+    width: 223px;
+    height: 55px;
   }
 }
 
