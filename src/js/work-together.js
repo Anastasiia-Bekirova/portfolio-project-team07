@@ -53,16 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      const response = await fetch('', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email,
-          comments: form.querySelector('input[type="text"]').value,
-        }),
-      });
+      const response = await fetch(
+        'https://portfolio-js.b.goit.study/api-docs',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: email,
+            comments: form.querySelector('input[type="text"]').value,
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error('Network response was not ok.');

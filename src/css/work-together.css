@@ -99,8 +99,10 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   margin-top: 32px;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.wt-btn:hover {
+.wt-btn:hover,
+.wt-btn:focus {
   background-color: #e0373f;
 }
 .wt-btn:active {
@@ -120,12 +122,17 @@
   padding: 10px 12px;
   font-weight: 500;
   font-size: 14px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.001em;
   color: #fafafa;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    text-shadow cubic-bezier(0.4, 0, 0.2, 1);
 }
 .wt-address-link:hover,
 .wt-address-link:focus {
   border-color: #fafafa;
+  box-shadow: 0 0 20px #ed3b44;
+  text-shadow: 0 0 12px #fafafa;
 }
 /** Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
