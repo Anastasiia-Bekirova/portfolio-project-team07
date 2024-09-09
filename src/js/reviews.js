@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Not found');
             }
             const reviewsHTML = reviews.map(review => `
-        <li class="swiper-slide">
+        <li class="swiper-slide slide-reviews">
           <div class="review">
             <img src="${review.avatar_url}" alt="Avatar of ${review.author}" class="review-avatar"/>
             <h3 class="author-name">${review.author}</h3>
