@@ -2,10 +2,10 @@
   <div class="container">
     <h2 class="about-me-title visually-hidden">About me</h2>
   
-    <section class="about-me-top">
+    <div class="about-me-top">
       <p class="about-me-summary">
         I work with people all over the world to create 
-        impressive and <span class="about-me-func">functional</span> 
+        impressive and <span class="about-me-func">functional</span>
         <span class="about-me-ws">websites</span> that reflect each 
         client's unique personality.
       </p>
@@ -14,7 +14,7 @@
             srcset="img/about-me/about-me-photo.jpg 1x, 
                     img/about-me/about-me-photo@2x.jpg 2x" 
             alt="lloyd-jefferson's-photo">
-    </section>
+    </div>
 
     <!-- **************ACCORDION************** -->
   
@@ -25,16 +25,16 @@
         <h3 class="about-me-acc-el-title">
           <button type="button" class="about-me-acc-el-trigger">
             About me
-            <div class="about-me-acc-arr arr-down is-hidden">
+            <span class="about-me-acc-arr arr-down is-hidden">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="img/icons.svg#icon-arrow-down"></use>
               </svg>
-            </div>
-            <div class="about-me-acc-arr arr-up">
+            </span>
+            <span class="about-me-acc-arr arr-up">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="img/icons.svg#icon-arrow-up"></use>
               </svg>
-            </div>
+            </span>
           </button>
         </h3>
   
@@ -71,16 +71,16 @@
         <h3 class="about-me-acc-el-title">        
           <button type="button" class="about-me-acc-el-trigger">
             Role
-            <div class="about-me-acc-arr arr-down">
+            <span class="about-me-acc-arr arr-down">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="img/icons.svg#icon-arrow-down"></use>
               </svg>
-            </div>
-            <div class="about-me-acc-arr arr-up is-hidden">
+            </span>
+            <span class="about-me-acc-arr arr-up is-hidden">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="img/icons.svg#icon-arrow-up"></use>
               </svg>
-            </div>
+            </span>
           </button>
         </h3>
   
@@ -96,16 +96,16 @@
         <h3 class="about-me-acc-el-title">
           <button type="button" class="about-me-acc-el-trigger">
             Education
-            <div class="about-me-acc-arr arr-down">
+            <span class="about-me-acc-arr arr-down">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="img/icons.svg#icon-arrow-down"></use>
               </svg>
-            </div>
-            <div class="about-me-acc-arr arr-up is-hidden">
+            </span>
+            <span class="about-me-acc-arr arr-up is-hidden">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="img/icons.svg#icon-arrow-up"></use>
               </svg>
-            </div>
+            </span>
           </button>
         </h3>
   
@@ -129,18 +129,8 @@
 
     <!-- **************SWIPER************** -->
   
-    <section class="about-me-swiper swiper">
+    <div class="about-me-swiper swiper">
 
-      <button class="about-me-swiper-btn-prev" type="button">
-        <svg class="about-me-swiper-svg" width="40" height="40">
-          <use href="img/icons.svg#icon-arrow-left"></use>
-        </svg>
-      </button>
-      <button class="about-me-swiper-btn-next" type="button">
-        <svg class="about-me-swiper-svg" width="40" height="40">
-          <use href="img/icons.svg#icon-arrow-right"></use>
-        </svg>
-      </button>
       <ul class="about-me-swiper-wrapper swiper-wrapper">
 
         <li class="about-me-swiper-slide-el swiper-slide">
@@ -187,7 +177,12 @@
 
       </ul>
 
+      <button class="about-me-swiper-btn-next" type="button">
+        <svg class="about-me-swiper-svg" width="40" height="40">
+          <use href="img/icons.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
       
-    </section>
+    </div>
   </div>
 </section>

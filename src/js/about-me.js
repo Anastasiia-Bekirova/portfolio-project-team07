@@ -53,23 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const nextButton = document.querySelector('.about-me-swiper-btn-next');
-  const prevButton = document.querySelector('.about-me-swiper-btn-prev');
 
   const swiper = new Swiper('.swiper', {
     modules: [Navigation, Keyboard, Mousewheel],
-    slidesPerView: 'auto',
+    slidesPerView: 2,
     spaceBetween: 0,
     loop: true,
-    // loopedSlides: 4,
     navigation: {
       nextEl: '.about-me-swiper-btn-next',
-      prevEl: prevButton,
     },
     keyboard: {
       enabled: true,
       onlyInViewport: false,
     },
-    mousewheel: true,
+    mousewheel: true,  
     on: {
       slideChange: function () {
         document
@@ -86,6 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
     },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 6,
+      },
+    }
   });
   window.addEventListener('load', () => {
     const initialActiveOverlay = document.querySelector('.swiper-slide-active .color-overlay');
