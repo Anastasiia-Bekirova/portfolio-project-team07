@@ -22,7 +22,7 @@
     <script type="module" crossorigin src="/portfolio-project-team07/index.js"></script>
     <link rel="modulepreload" crossorigin href="/portfolio-project-team07/assets/vendor-CSjIQQqb.js">
     <link rel="stylesheet" crossorigin href="/portfolio-project-team07/assets/vendor-CTkdz8MY.css">
-    <link rel="stylesheet" crossorigin href="/portfolio-project-team07/assets/index-BQvTUpO7.css">
+    <link rel="stylesheet" crossorigin href="/portfolio-project-team07/assets/index-COVPBiX1.css">
   </head>
   <body>
     <header class="header">
@@ -176,10 +176,10 @@
   <div class="container">
     <h2 class="about-me-title visually-hidden">About me</h2>
   
-    <section class="about-me-top">
+    <div class="about-me-top">
       <p class="about-me-summary">
         I work with people all over the world to create 
-        impressive and <span class="about-me-func">functional</span> 
+        impressive and <span class="about-me-func">functional</span>
         <span class="about-me-ws">websites</span> that reflect each 
         client's unique personality.
       </p>
@@ -187,7 +187,9 @@
             src="/portfolio-project-team07/assets/about-me-photo-UPlEj8NI.jpg" 
             srcset="/portfolio-project-team07/assets/about-me-photo-UPlEj8NI.jpg 1x, /portfolio-project-team07/assets/about-me-photo@2x-CJrP60ZI.jpg 2x" 
             alt="lloyd-jefferson's-photo">
-    </section>
+    </div>
+
+    <!-- **************ACCORDION************** -->
   
     <ul class="about-me-acc">
   
@@ -196,16 +198,16 @@
         <h3 class="about-me-acc-el-title">
           <button type="button" class="about-me-acc-el-trigger">
             About me
-            <div class="about-me-acc-arr arr-down is-hidden">
+            <span class="about-me-acc-arr arr-down is-hidden">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="/portfolio-project-team07/assets/icons-DGgx9QzL.svg#icon-arrow-down"></use>
               </svg>
-            </div>
-            <div class="about-me-acc-arr arr-up">
+            </span>
+            <span class="about-me-acc-arr arr-up">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="/portfolio-project-team07/assets/icons-DGgx9QzL.svg#icon-arrow-up"></use>
               </svg>
-            </div>
+            </span>
           </button>
         </h3>
   
@@ -242,16 +244,16 @@
         <h3 class="about-me-acc-el-title">        
           <button type="button" class="about-me-acc-el-trigger">
             Role
-            <div class="about-me-acc-arr arr-down">
+            <span class="about-me-acc-arr arr-down">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="/portfolio-project-team07/assets/icons-DGgx9QzL.svg#icon-arrow-down"></use>
               </svg>
-            </div>
-            <div class="about-me-acc-arr arr-up is-hidden">
+            </span>
+            <span class="about-me-acc-arr arr-up is-hidden">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="/portfolio-project-team07/assets/icons-DGgx9QzL.svg#icon-arrow-up"></use>
               </svg>
-            </div>
+            </span>
           </button>
         </h3>
   
@@ -267,16 +269,16 @@
         <h3 class="about-me-acc-el-title">
           <button type="button" class="about-me-acc-el-trigger">
             Education
-            <div class="about-me-acc-arr arr-down">
+            <span class="about-me-acc-arr arr-down">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="/portfolio-project-team07/assets/icons-DGgx9QzL.svg#icon-arrow-down"></use>
               </svg>
-            </div>
-            <div class="about-me-acc-arr arr-up is-hidden">
+            </span>
+            <span class="about-me-acc-arr arr-up is-hidden">
               <svg class="about-me-acc-svg" width="20" height="20">
                 <use href="/portfolio-project-team07/assets/icons-DGgx9QzL.svg#icon-arrow-up"></use>
               </svg>
-            </div>
+            </span>
           </button>
         </h3>
   
@@ -297,43 +299,64 @@
       </li>
       
     </ul>
+
+    <!-- **************SWIPER************** -->
   
-    <section class="about-me-swiper">
-      <div class="about-me-swiper-buttons">
-        <button class="about-me-swiper-btn-prev" type="button">
-          <svg class="about-me-swiper-svg" width="40" height="40">
-            <use href="/portfolio-project-team07/assets/icons-DGgx9QzL.svg#icon-arrow-left"></use>
-          </svg>
-        </button>
-      </div>
-      <ul class="a-swiper-wrapper">
-        <li class="about-me-swiper-slide-el">
-          <div class="about-me-swiper-slide-el-text active">HTML/CSS</div>
+    <div class="about-me-swiper swiper">
+
+      <ul class="about-me-swiper-wrapper swiper-wrapper">
+
+        <li class="about-me-swiper-slide-el swiper-slide">
+          <div class="about-me-swiper-slide-el-circle">
+            <div class="color-overlay"></div>
+            <div class="about-me-swiper-slide-el-text">HTML/CSS</div>
+          </div>
         </li>
-        <li class="about-me-swiper-slide-el">
-          <div class="about-me-swiper-slide-el-text">JavaScript</div>
+
+        <li class="about-me-swiper-slide-el swiper-slide">
+          <div class="about-me-swiper-slide-el-circle">
+            <div class="color-overlay"></div>
+            <div class="about-me-swiper-slide-el-text">JavaScript</div>
+          </div>          
         </li>
-        <li class="about-me-swiper-slide-el">
-          <div class="about-me-swiper-slide-el-text">React</div>
+
+        <li class="about-me-swiper-slide-el swiper-slide">
+          <div class="about-me-swiper-slide-el-circle">
+            <div class="color-overlay"></div>
+            <div class="about-me-swiper-slide-el-text">React</div>
+          </div>          
         </li>
-        <li class="about-me-swiper-slide-el">
-          <div class="about-me-swiper-slide-el-text">Node.js</div>
+
+        <li class="about-me-swiper-slide-el swiper-slide">
+          <div class="about-me-swiper-slide-el-circle">
+            <div class="color-overlay"></div>
+            <div class="about-me-swiper-slide-el-text">Node.js</div>
+          </div>          
         </li>
-        <li class="about-me-swiper-slide-el">
-          <div class="about-me-swiper-slide-el-text">React Native</div>
+
+        <li class="about-me-swiper-slide-el swiper-slide">
+          <div class="about-me-swiper-slide-el-circle">
+            <div class="color-overlay"></div>
+            <div class="about-me-swiper-slide-el-text">React Native</div>
+          </div>          
         </li>
-        <li class="about-me-swiper-slide-el">
-          <div class="about-me-swiper-slide-el-text">Soft skills</div>
+
+        <li class="about-me-swiper-slide-el swiper-slide">
+          <div class="about-me-swiper-slide-el-circle">
+            <div class="color-overlay"></div>
+            <div class="about-me-swiper-slide-el-text">Soft skills</div>
+          </div>          
         </li>
+
       </ul>
-      <div class="about-me-swiper-buttons">
-        <button class="about-me-swiper-btn-next" type="button">
-          <svg class="about-me-swiper-svg" width="40" height="40">
-            <use href="/portfolio-project-team07/assets/icons-DGgx9QzL.svg#icon-arrow-right"></use>
-          </svg>
-        </button>
-      </div>
-    </section>
+
+      <button class="about-me-swiper-btn-next" type="button">
+        <svg class="about-me-swiper-svg" width="40" height="40">
+          <use href="/portfolio-project-team07/assets/icons-DGgx9QzL.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      
+    </div>
   </div>
 </section>
 
