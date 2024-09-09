@@ -1,4 +1,8 @@
 import Accordion from 'accordion-js';
+import Swiper from 'swiper';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+
+//* ACCORDION *//
 
 document.addEventListener('DOMContentLoaded', () => {
   const accordion = new Accordion('.about-me-acc', {
@@ -19,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     accordionElements.forEach(el => {
       const arrowDown = el.querySelector('.arr-down');
       const arrowUp = el.querySelector('.arr-up');
-      
+
       if (el !== activeElement) {
         el.style.marginBottom = '0';
         arrowDown.classList.remove('is-hidden');
@@ -28,10 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (activeElement) {
-      const activePanel = activeElement.querySelector('.about-me-acc-el-descr-frame');
+      const activePanel = activeElement.querySelector(
+        '.about-me-acc-el-descr-frame'
+      );
       const activeArrowDown = activeElement.querySelector('.arr-down');
       const activeArrowUp = activeElement.querySelector('.arr-up');
-      
+
       activePanel.style.paddingBottom = `${activePanel.scrollHeight}px`;
       activeArrowDown.classList.add('is-hidden');
       activeArrowUp.classList.remove('is-hidden');
@@ -40,5 +46,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.about-me-acc-el-trigger').forEach(trigger => {
     trigger.addEventListener('click', adjustMargins);
+  });
+});
+
+//* SWIPER *//
+
+document.addEventListener('DOMContentLoaded', () => {
+  const nextButton = document.querySelector('.about-me-swiper-btn-next');
+
+  const swiper = new Swiper('.swiper', {
+    modules: [Navigation, Keyboard, Mousewheel],
+    slidesPerView: 2,
+    spaceBetween: 0,
+    loop: true,
+    navigation: {
+      nextEl: '.about-me-swiper-btn-next',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    mousewheel: true,  
+    on: {
+      slideChange: function () {
+        document
+          .querySelectorAll('.color-overlay')
+          .forEach(overlay => {
+            overlay.style.transform = 'scale(0)';
+          });
+
+        const activeOverlay = document.querySelector(
+          '.swiper-slide-active .color-overlay'
+        );
+        if (activeOverlay) {
+          activeOverlay.style.transform = 'scale(1)';
+        }
+      },
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 6,
+      },
+    }
+  });
+  window.addEventListener('load', () => {
+    const initialActiveOverlay = document.querySelector('.swiper-slide-active .color-overlay');
+    if (initialActiveOverlay) {
+      initialActiveOverlay.style.transform = 'scale(1)';
+    }
   });
 });
