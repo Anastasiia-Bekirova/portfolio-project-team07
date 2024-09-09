@@ -1,5 +1,6 @@
 .modal {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -8,7 +9,14 @@
   height: 100%;
   overflow: auto;
   background: rgba(15, 15, 16, 0.6);
+  transition: opacity 500ms ease-in, visibility 500ms ease-in;
 }
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .modal-content {
   background-color: #1c1d20;
   border: 1px solid rgba(250, 250, 250, 0.1);

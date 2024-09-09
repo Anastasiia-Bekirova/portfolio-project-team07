@@ -88,13 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openModal() {
     if (modal) {
-      modal.style.display = 'flex';
+      modal.classList.add('active');
     }
   }
 
   function closeModalFunction() {
     if (modal) {
-      modal.style.display = 'none';
+      modal.classList.remove('active');
     }
   }
 
