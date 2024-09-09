@@ -12,7 +12,7 @@ closeBtn.addEventListener('click', closeBtnClick);
 menuList.addEventListener('click', menuBtnClick);
 orderBtn.addEventListener('click', closeBtnClick);
 burgerMenuList.addEventListener('click', closeBtnClick);
-
+backdropMenu.addEventListener('click', closeBtnClick);
 document.body.addEventListener('click', event => {
   if (
     !menuList.classList.contains('visually-hidden') &&
@@ -21,6 +21,26 @@ document.body.addEventListener('click', event => {
     menuBtnClick();
   }
 });
+const menuOpenKeyframes = new KeyframeEffect(
+  menuList,
+  [
+    { opacity: '0', transform: 'scale:1)' },
+    { opacity: '1', transform: 'scale:0' },
+  ],
+  { duration: 1000 }
+);
+
+const menuCloseKeyframes = new KeyframeEffect(
+  menuList,
+  [
+    { opacity: '1', transform: 'scale:0' },
+    { opacity: '0', transform: 'scale:1' },
+  ],
+  { duration: 500 }
+);
+const menuOpenAnimation = new Animation(menuOpenKeyframes, document.timeline);
+
+const menuCloseAnimation = new Animation(menuCloseKeyframes, document.timeline);
 
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && !menuList.classList.contains('is-open')) {
@@ -30,9 +50,11 @@ document.addEventListener('keydown', event => {
 
 function menuBtnClick() {
   if (menuList.classList.contains('visually-hidden')) {
+    menuOpenAnimation.play();
     menuList.classList.remove('visually-hidden');
     return;
   }
+  menuCloseAnimation.play();
   setTimeout(() => {
     menuList.classList.add('visually-hidden');
   }, 500);
@@ -40,12 +62,12 @@ function menuBtnClick() {
 
 function burgerBtnClick() {
   backdropMenu.classList.add('is-open');
+  backdropMenu.classList.remove('is-closed');
   document.body.style.overflow = 'hidden';
 }
 
 function closeBtnClick() {
-  setTimeout(() => {
-    backdropMenu.classList.remove('is-open');
-  }, 500);
+  backdropMenu.classList.remove('is-open');
+  backdropMenu.classList.add('is-closed');
   document.body.style.overflow = '';
 }
