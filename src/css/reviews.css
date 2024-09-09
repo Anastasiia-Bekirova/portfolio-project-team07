@@ -14,7 +14,7 @@
 .reviews {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 0 auto;
 }
 .reviews-title {
   padding-top: 0;
@@ -23,7 +23,7 @@
   margin-bottom: 32px;
 }
 
-.swiper-slide {
+.slide-reviews {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 32px 24px;
@@ -91,12 +91,11 @@
   .author-review {
     max-width: 296px;
   }
+  .reviews {
+    margin: 0 auto;
+  }
 }
 @media only screen and (min-width: 1440px) {
-  .swiper-slide {
-    width: 100%;
-    height: 100%;
-  }
   .reviews {
     margin: 0 auto;
   }
