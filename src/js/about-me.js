@@ -6,7 +6,7 @@ import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
   const accordion = new Accordion('.about-me-acc', {
-    duration: 300,
+    duration: 500,
     showMultiple: false,
     collapse: true,
     elementClass: 'about-me-acc-el',
@@ -32,13 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (activeElement) {
-      const activePanel = activeElement.querySelector(
-        '.about-me-acc-el-descr-frame'
-      );
       const activeArrowDown = activeElement.querySelector('.arr-down');
       const activeArrowUp = activeElement.querySelector('.arr-up');
 
-      activePanel.style.paddingBottom = `${activePanel.scrollHeight}px`;
       activeArrowDown.classList.add('is-hidden');
       activeArrowUp.classList.remove('is-hidden');
     }
@@ -54,19 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const nextButton = document.querySelector('.about-me-swiper-btn-next');
 
-  const swiper = new Swiper('.swiper', {
+  const swiperAboutMe = new Swiper('.swiper', {
     modules: [Navigation, Keyboard, Mousewheel],
     slidesPerView: 2,
     spaceBetween: 0,
     loop: true,
     navigation: {
-      nextEl: '.about-me-swiper-btn-next',
+      nextEl: nextButton,
     },
     keyboard: {
       enabled: true,
       onlyInViewport: false,
     },
-    mousewheel: true,  
+    mousewheel: {
+      invert: true},
     on: {
       slideChange: function () {
         document
