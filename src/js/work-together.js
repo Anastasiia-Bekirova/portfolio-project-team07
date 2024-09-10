@@ -1,5 +1,6 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import validator from 'validator';
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.wt-form');
@@ -16,15 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Обработчик ввода для emailInput
   emailInput.addEventListener('input', () => {
     const email = emailInput.value;
-    const emailValid = emailInput.checkValidity();
-    const emailEndsWithGmail = email.endsWith('@gmail.com');
+    const emailValid = validator.isEmail(email);
 
     if (email === '') {
       // Очистка сообщения и стилей, если поле пустое
       emailMessage.textContent = '';
       emailMessage.className = 'message-input';
       emailInput.classList.remove('error', 'success');
-    } else if (!emailValid || !emailEndsWithGmail) {
+    } else if (!emailValid) {
       emailMessage.textContent = 'Invalid email, try again';
       emailMessage.className = 'message-input error';
       emailInput.classList.add('error');
@@ -41,10 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
 
     const email = emailInput.value;
-    const emailValid = emailInput.checkValidity();
-    const emailEndsWithGmail = email.endsWith('@gmail.com');
+    const emailValid = validator.isEmail(email);
 
-    if (!emailValid || !emailEndsWithGmail) {
+    if (!emailValid) {
       emailMessage.textContent = 'Invalid email, try again';
       emailMessage.className = 'message-input error';
       emailInput.classList.add('error');
@@ -85,16 +84,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-
+  // Запрет скролла при открытии модалки
   function openModal() {
     if (modal) {
       modal.classList.add('active');
+      document.body.classList.add('no-scroll');
     }
   }
-
+  // Возврат скролла при закрытии модалки
   function closeModalFunction() {
     if (modal) {
       modal.classList.remove('active');
+      document.body.classList.remove('no-scroll');
     }
   }
 
