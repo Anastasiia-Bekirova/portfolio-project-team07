@@ -167,7 +167,6 @@
   .order-btn {
     width: 164px;
     display: flex;
-    padding: 18px 24px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -190,6 +189,10 @@
   .order-btn:focus {
     background: #e0373f;
     scale: 1.2;
+  }
+  .order-btn-link {
+    width: 164px;
+    padding: 18px 24px;
   }
 }
 
@@ -219,7 +222,7 @@
 .backdrop-menu.is-open {
   transform: translateX(0);
   opacity: 1;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-name: slideX;
 }
 .backdrop-menu.is-closed {
