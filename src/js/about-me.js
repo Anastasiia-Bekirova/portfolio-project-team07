@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   //* ACCORDION *//
   
   const accordion = new Accordion('.about-me-acc', {
