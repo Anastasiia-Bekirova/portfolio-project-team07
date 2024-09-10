@@ -114,7 +114,6 @@
   .navigation-menu-btn {
     top: 0;
     color: #fafafa;
-    font-family: 'Inter Tight';
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -148,7 +147,7 @@
     color: #fafafa;
 
     /* Desktop_tablet/Btn_text */
-    font-family: 'Inter Tight';
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -173,7 +172,7 @@
     margin-bottom: auto;
     color: #fafafa;
     /* Desktop_tablet/Btn_text */
-    font-family: 'Inter Tight';
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -278,7 +277,7 @@
 }
 .backdrop-menu-list-item {
   color: #fafafa;
-  font-family: Inter Tight;
+  
   font-size: 16px;
   font-weight: 500;
   line-height: 1.19;
