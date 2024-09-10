@@ -23,19 +23,13 @@ document.body.addEventListener('click', event => {
 });
 const menuOpenKeyframes = new KeyframeEffect(
   menuList,
-  [
-    { opacity: '0', transform: 'scale:1)' },
-    { opacity: '1', transform: 'scale:0' },
-  ],
+  [{ opacity: '0' }, { opacity: '1' }],
   { duration: 1000 }
 );
 
 const menuCloseKeyframes = new KeyframeEffect(
   menuList,
-  [
-    { opacity: '1', transform: 'scale:0' },
-    { opacity: '0', transform: 'scale:1' },
-  ],
+  [{ opacity: '1' }, { opacity: '0' }],
   { duration: 500 }
 );
 const menuOpenAnimation = new Animation(menuOpenKeyframes, document.timeline);
