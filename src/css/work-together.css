@@ -1,10 +1,10 @@
 .work-together {
   max-width: 375px;
-  margin: auto;
   background-image: url('/img/work-together/glass-effect-mobile.png');
   background-repeat: no-repeat;
   background-size: 85px 100%;
   background-position: right;
+  margin: auto;
   /* background-color: #e0373f; */
 }
 .wt-header-wrapper {
@@ -198,9 +198,11 @@
     max-width: 1440px;
     background-image: url('/img/work-together/glass-effect-desktop.png');
     background-size: 400px 100%;
+    /* padding-left: 196px; */
   }
-  .work-together {
-    padding-left: 196px;
+  .wt-container {
+    width: 1048px;
+    margin: auto;
   }
   .wt-input {
     width: 390px;
