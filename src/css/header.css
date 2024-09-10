@@ -1,11 +1,9 @@
 @keyframes open {
   from {
-    scale: 0.25;
     transform: translateY(-100%);
     opacity: 0;
   }
   to {
-    scale: 1;
     transform: translateY(0);
     opacity: 1;
   }
@@ -30,36 +28,6 @@
     opacity: 0;
   }
 }
-@keyframes scale {
-  from {
-    scale: 0.1;
-  }
-  to {
-    scale: 1;
-  }
-}
-
-@keyframes openScale {
-  from {
-    scale: 0.25;
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-    scale: 1;
-  }
-}
-
-@keyframes openScaleRevers {
-  from {
-    scale: 0.25;
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-    scale: 1;
-  }
-}
 
 .header {
   background-color: transparent;
@@ -77,8 +45,6 @@
 .header-img {
   display: flex;
   margin-bottom: auto;
-  animation-duration: 1.5s;
-  animation-name: open;
 }
 .logo-image {
   margin-right: 8px;
@@ -118,8 +84,6 @@
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
-  animation-duration: 1.5s;
-  animation-name: open;
 }
 
 .burger-icon {
@@ -168,8 +132,6 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    animation-duration: 1.5s;
-    animation-name: open;
   }
   .navigation-menu-btn:hover,
   .navigation-menu-btn:focus {
@@ -205,7 +167,6 @@
   .order-btn {
     width: 164px;
     display: flex;
-    padding: 18px 24px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -223,19 +184,34 @@
     transition-property: background;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    animation-duration: 1.5s;
-    animation-name: open;
   }
   .order-btn:hover,
   .order-btn:focus {
     background: #e0373f;
     scale: 1.2;
   }
+  .order-btn-link {
+    width: 164px;
+    padding: 18px 24px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
   .header-container {
     width: 1440px;
+  }
+
+  .header-img {
+    animation-duration: 1.5s;
+    animation-name: open;
+  }
+  .navigation-menu-btn {
+    animation-duration: 1.5s;
+    animation-name: open;
+  }
+  .order-btn {
+    animation-duration: 1.5s;
+    animation-name: open;
   }
 }
 .backdrop {
@@ -246,7 +222,7 @@
 .backdrop-menu.is-open {
   transform: translateX(0);
   opacity: 1;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-name: slideX;
 }
 .backdrop-menu.is-closed {

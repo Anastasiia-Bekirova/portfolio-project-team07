@@ -14,9 +14,6 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   margin-bottom: 212px;
-  animation-duration: 1.5s;
-  animation-name: scale;
-
 }
 
 .hero-link-list {
@@ -48,21 +45,30 @@
   text-shadow: 0 0 12px #fafafa;
 }
 
+.hero-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 37px;
+}
+
 .hero-link-item-email {
   text-transform: none;
   width: 178px;
 }
 
+.hero-link-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 178px;
+  height: 37px;
+}
+
 @media screen and (max-width: 358px) {
   .hero-title {
     margin-bottom: 162px;
-  }
-}
-
-@media screen and (min-resolution: 192dpi) {
-  .hero {
-    background-image: url('../img/hero/hero-bg-phone@2x-min.png'),
-      linear-gradient(270deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
   }
 }
 
@@ -90,16 +96,19 @@
     height: 55px;
   }
 
+  .hero-link {
+    width: 55px;
+    height: 55px;
+  }
+
   .hero-link-item-email {
     text-transform: none;
     width: 223px;
   }
 
-  @media screen and (min-resolution: 192dpi) {
-    .hero {
-      background-image: url('../img/hero/hero-bg-tablet@2x-min.png'),
-        linear-gradient(270deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
-    }
+  .hero-link-email {
+    width: 223px;
+    height: 55px;
   }
 }
 
@@ -116,12 +125,5 @@
     margin-bottom: 243px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  @media screen and (min-resolution: 192dpi) {
-    .hero {
-      background-image: url('../img/hero/hero-bg-desktop@2x-min.png'),
-        linear-gradient(270deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
-    }
   }
 }
