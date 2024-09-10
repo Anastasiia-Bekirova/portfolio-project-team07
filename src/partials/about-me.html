@@ -9,12 +9,15 @@
         <span class="about-me-ws">websites</span> that reflect each 
         client's unique personality.
       </p>
-      <img class="about-me-photo" 
+      <picture class="img-container">
+        <source media="(min-width: 768px)" srcset="../img/about-me/about-me-photo.jpg 1x, ../img/about-me/about-me-photo@2x.jpg">
+        <img class="about-me-photo" 
             src="img/about-me/about-me-photo.jpg" 
             srcset="img/about-me/about-me-photo.jpg 1x, 
                     img/about-me/about-me-photo@2x.jpg 2x" 
             alt="lloyd-jefferson's-photo"
             loading="lazy">
+      </picture>
     </div>
 
     <!-- **************ACCORDION************** -->
@@ -130,62 +133,35 @@
 
     <!-- **************SWIPER************** -->
   
-    <div class="about-me-swiper">
-
-      <div class="swiper">
-        <ul class="about-me-swiper-wrapper swiper-wrapper">
+    <div class="swiper about-me-swiper">
+      <ul class="swiper-wrapper about-me-swiper-wrapper">
+        <li class="swiper-slide about-me-swiper-slide-el">
+          <div class="about-me-swiper-slide-el-text">HTML/CSS</div>
+        </li>
+        <li class="swiper-slide about-me-swiper-slide-el">
+          <div class="about-me-swiper-slide-el-text">JavaScript</div>
+        </li>
+        <li class="swiper-slide about-me-swiper-slide-el">
+          <div class="about-me-swiper-slide-el-text">React</div>
+        </li>
+        <li class="swiper-slide about-me-swiper-slide-el">
+          <div class="about-me-swiper-slide-el-text">Node.js</div>
+        </li>
+        <li class="swiper-slide about-me-swiper-slide-el">
+          <div class="about-me-swiper-slide-el-text">React Native</div>
+        </li>
+        <li class="swiper-slide about-me-swiper-slide-el">
+          <div class="about-me-swiper-slide-el-text">Vue.js</div>
+        </li>
+        <li class="swiper-slide about-me-swiper-slide-el">
+          <div class="about-me-swiper-slide-el-text">Soft skills</div>
+        </li>
+      </ul>
   
-          <li class="about-me-swiper-slide-el swiper-slide">
-            <div class="about-me-swiper-slide-el-circle">
-              <div class="color-overlay"></div>
-              <div class="about-me-swiper-slide-el-text">HTML/CSS</div>
-            </div>
-          </li>
-  
-          <li class="about-me-swiper-slide-el swiper-slide">
-            <div class="about-me-swiper-slide-el-circle">
-              <div class="color-overlay"></div>
-              <div class="about-me-swiper-slide-el-text">JavaScript</div>
-            </div>          
-          </li>
-  
-          <li class="about-me-swiper-slide-el swiper-slide">
-            <div class="about-me-swiper-slide-el-circle">
-              <div class="color-overlay"></div>
-              <div class="about-me-swiper-slide-el-text">React</div>
-            </div>          
-          </li>
-  
-          <li class="about-me-swiper-slide-el swiper-slide">
-            <div class="about-me-swiper-slide-el-circle">
-              <div class="color-overlay"></div>
-              <div class="about-me-swiper-slide-el-text">Node.js</div>
-            </div>          
-          </li>
-  
-          <li class="about-me-swiper-slide-el swiper-slide">
-            <div class="about-me-swiper-slide-el-circle">
-              <div class="color-overlay"></div>
-              <div class="about-me-swiper-slide-el-text">React Native</div>
-            </div>          
-          </li>
-  
-          <li class="about-me-swiper-slide-el swiper-slide">
-            <div class="about-me-swiper-slide-el-circle">
-              <div class="color-overlay"></div>
-              <div class="about-me-swiper-slide-el-text">Soft skills</div>
-            </div>          
-          </li>
-  
-        </ul>
-  
-        <button class="about-me-swiper-btn-next" type="button">
-          <svg class="about-me-swiper-svg" width="40" height="40">
-            <use href="img/icons.svg#icon-arrow-right"></use>
-          </svg>
-        </button>
-      </div>
-      
+      <button class="swiper-button-next about-me-swiper-btn-next" type="button">
+        <svg class="about-me-swiper-svg" width="28" height="28">
+          <use href="img/icons.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
     </div>
-  </div>
 </section>
