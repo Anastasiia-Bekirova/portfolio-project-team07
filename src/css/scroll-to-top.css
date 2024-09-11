@@ -1,0 +1,38 @@
+@media screen and (min-width: 1440px) {
+  .backToTopBtn {
+    padding: 10px;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    width: 52px;
+    height: 52px;
+    background-color: #ed3b44;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease,
+      background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+    z-index: 9999999999;
+  }
+
+  .backToTopBtn:hover {
+    background-color: #e0373f;
+    transform: scale(1.1);
+  }
+
+  .backToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .arrowBackToTop {
+    transform: rotate(-90deg);
+    stroke: #fafafa;
+    fill: none;
+  }
+}
