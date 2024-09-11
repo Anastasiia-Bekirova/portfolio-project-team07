@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const response = await fetch(
-        'https://portfolio-js.b.goit.study/api-docs',
+        'https://portfolio-js.b.goit.study/api/requests',
         {
           method: 'POST',
           headers: {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           body: JSON.stringify({
             email: email,
-            comments: form.querySelector('input[type="text"]').value,
+            comment: form.querySelector('input[type="text"]').value,
           }),
         }
       );
