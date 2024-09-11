@@ -408,13 +408,21 @@
             >
           </div>
           <div class="project-dark-container">
-            <img
-              class="project-img"
-              src="/portfolio-project-team07/assets/projects_1_1x-C3IfiJYw.webp"
-              srcset="/portfolio-project-team07/assets/projects_1_1x-C3IfiJYw.webp 1x, /portfolio-project-team07/assets/projects_1_2x-DTHttJsH.webp 2x"
-              loading="lazy"
-              alt=""
-            />
+            <picture>
+              <source
+                srcset="/portfolio-project-team07/assets/projects_1_1x-C3IfiJYw.webp 1x, /portfolio-project-team07/assets/projects_1_2x-DTHttJsH.webp 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/portfolio-project-team07/assets/image_1_mob_1x-C2ADPUWy.png 1x, /portfolio-project-team07/assets/image1_mob_2x-DT3NYDri.png 2x"
+                media="(max-width: 767px)"
+              />
+              <img
+                src="/portfolio-project-team07/assets/projects_1_1x-C3IfiJYw.webp"
+                alt="read journey"
+                loading="lazy"
+              />
+            </picture>
           </div>
         </li>
         <li class="swiper-slide project-swiper-slide">
@@ -436,11 +444,17 @@
             >
           </div>
           <div class="project-dark-container">
-            <img
-              class="project-img"
-              src="/portfolio-project-team07/assets/projects_2_1x-CrxH0G3E.webp"
+            <source
               srcset="/portfolio-project-team07/assets/projects_2_1x-CrxH0G3E.webp 1x, /portfolio-project-team07/assets/projects_2_2x-BFFhm3Ja.webp 2x"
-              alt=""
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="img/projects/image_2_mob_1x.png 1x, /portfolio-project-team07/assets/image_2_mob_x2-D0qAc2a7.png 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              src="/portfolio-project-team07/assets/projects_2_1x-CrxH0G3E.webp"
+              alt="pet love"
               loading="lazy"
             />
           </div>
@@ -464,11 +478,17 @@
             >
           </div>
           <div class="project-dark-container">
+            <source
+              srcset="/portfolio-project-team07/assets/projects_3_1x-B6e_xWwE.webp 1x, /portfolio-project-team07/assets/projects_3_2x-DMd_vjNv.webp 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="/portfolio-project-team07/assets/image_3_mob_1x-ClENNcEN.png 1x, /portfolio-project-team07/assets/image_3_mob_1x-ClENNcEN.png 2x"
+              media="(max-width: 767px)"
+            />
             <img
-              class="project-img"
-              src="/portfolio-project-team07/assets/projects_1_1x-C3IfiJYw.webp"
-              srcset="/portfolio-project-team07/assets/projects_1_1x-C3IfiJYw.webp 1x, /portfolio-project-team07/assets/projects_3_2x-DMd_vjNv.webp 2x"
-              alt=""
+              src="/portfolio-project-team07/assets/projects_3_1x-B6e_xWwE.webp"
+              alt="vocab builder"
               loading="lazy"
             />
           </div>
@@ -499,8 +519,6 @@
 
   <!--  -->
 </section>
-<!-- hello -->
-<!-- comments -->
 
       <section class="faq" id="faq-section">
   <div class="faq-container container">
