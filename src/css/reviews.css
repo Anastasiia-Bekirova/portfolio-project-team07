@@ -94,6 +94,15 @@
   .reviews {
     margin: 0 auto;
   }
+  .custom-prev,
+  .custom-next {
+    width: 68px;
+    height: 68px;
+  }
+  .arrow-next {
+    width: 32px;
+    height: 32px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   .reviews {
