@@ -1,38 +1,39 @@
-@media screen and (min-width: 1440px) {
-  .backToTopBtn {
-    padding: 10px;
-    position: fixed;
-    bottom: 30px;
-    right: 40px;
-    width: 52px;
-    height: 52px;
-    background-color: #ed3b44;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease,
-      background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
-    z-index: 9999999999;
-  }
+.backToTopBtn {
+  padding: 10px;
+  position: fixed;
+  bottom: 30px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 0, 0, 0.5);
+  box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  /* transition: opacity 0.3s ease, visibility 0.3s ease,
+      background-color 0.5s ease-in-out, transform 0.5s ease-in-out; */
+  z-index: 9999999999;
+}
 
-  .backToTopBtn:hover {
-    background-color: #e0373f;
-    transform: scale(1.1);
-  }
+/* .backToTopBtn:hover {
+  background-color: #e0373f;
+  transform: scale(1.1);
+} */
 
-  .backToTopBtn.show {
-    opacity: 1;
-    visibility: visible;
-  }
+.backToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  right: 30px;
+}
 
-  .arrowBackToTop {
-    transform: rotate(-90deg);
-    stroke: #fafafa;
-    fill: none;
-  }
+.arrowBackToTop {
+  transform: rotate(-90deg);
+  stroke: #fafafa;
+  fill: none;
 }
