@@ -22,15 +22,66 @@
             >
           </div>
           <div class="project-dark-container">
-            <img
-              class="project-img"
-              src="img/projects/projects_1_1x.webp"
+            <picture>
+              <source
+                srcset="
+                  ../img/projects/projects_1_1x.webp 1x,
+                  ../img/projects/projects_1_2x.webp 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ../img/projects/image_1_mob_1x.png 1x,
+                  ../img/projects/image1_mob_2x.png  2x
+                "
+                media="(max-width: 767px)"
+              />
+              <img
+                src="../img/projects/projects_1_1x.webp"
+                alt="read journey"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </li>
+        <li class="swiper-slide project-swiper-slide">
+          <div class="project-white-container">
+            <ul class="project-swiper-list">
+              <li class="project-swiper-item">#react</li>
+              <li class="project-swiper-item">#js</li>
+              <li class="project-swiper-item">#node js</li>
+              <li class="project-swiper-item">#git</li>
+            </ul>
+            <h3 class="project-swiper-title">
+              Programming Across Borders: Ideas, Technologies, Innovations
+            </h3>
+            <a
+              href="https://github.com/Anastasiia-Bekirova/portfolio-project-team07"
+              class="project-swiper-link"
+              target="_blank"
+              >See project</a
+            >
+          </div>
+          <div class="project-dark-container">
+            <source
               srcset="
-                img/projects/projects_1_1x.webp 1x,
-                img/projects/projects_1_2x.webp 2x
+                ../img/projects/projects_2_1x.webp 1x,
+                ../img/projects/projects_2_2x.webp 2x
               "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ../img/projects/image_2_mob_1x.png 1x,
+                ../img/projects/image_2_mob_x2.png 2x
+              "
+              media="(max-width: 767px)"
+            />
+            <img
+              src="../img/projects/projects_2_1x.webp"
+              alt="pet love"
               loading="lazy"
-              alt=""
             />
           </div>
         </li>
@@ -53,45 +104,23 @@
             >
           </div>
           <div class="project-dark-container">
-            <img
-              class="project-img"
-              src="img/projects/projects_2_1x.webp"
+            <source
               srcset="
-                img/projects/projects_2_1x.webp 1x,
-                img/projects/projects_2_2x.webp 2x
+                ../img/projects/projects_3_1x.webp 1x,
+                ../img/projects/projects_3_2x.webp 2x
               "
-              alt=""
-              loading="lazy"
+              media="(min-width: 768px)"
             />
-          </div>
-        </li>
-        <li class="swiper-slide project-swiper-slide">
-          <div class="project-white-container">
-            <ul class="project-swiper-list">
-              <li class="project-swiper-item">#react</li>
-              <li class="project-swiper-item">#js</li>
-              <li class="project-swiper-item">#node js</li>
-              <li class="project-swiper-item">#git</li>
-            </ul>
-            <h3 class="project-swiper-title">
-              Programming Across Borders: Ideas, Technologies, Innovations
-            </h3>
-            <a
-              href="https://github.com/Anastasiia-Bekirova/portfolio-project-team07"
-              class="project-swiper-link"
-              target="_blank"
-              >See project</a
-            >
-          </div>
-          <div class="project-dark-container">
-            <img
-              class="project-img"
-              src="img/projects/projects_1_1x.webp"
+            <source
               srcset="
-                img/projects/projects_1_1x.webp 1x,
-                img/projects/projects_3_2x.webp 2x
+                ../img/projects/image_3_mob_1x.png 1x,
+                ../img/projects/image_3_mob_x2.png 2x
               "
-              alt=""
+              media="(max-width: 767px)"
+            />
+            <img
+              src="../img/projects/projects_3_1x.webp"
+              alt="vocab builder"
               loading="lazy"
             />
           </div>
@@ -122,5 +151,3 @@
 
   <!--  -->
 </section>
-<!-- hello -->
-<!-- comments -->
