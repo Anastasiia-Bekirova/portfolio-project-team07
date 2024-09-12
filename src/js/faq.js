@@ -1,10 +1,53 @@
 import Accordion from 'accordion-js';
 
-const accordion1 = new Accordion('.faq-accordion-container-1', {
+function createAccordion({
+  containerClass,
+  elementClass,
+  triggerClass,
+  panelClass,
+  openOnInit = [],
+  duration = 400,
+}) {
+  return new Accordion(containerClass, {
+    elementClass,
+    triggerClass,
+    panelClass,
     showMultiple: true,
-    collapse: true,
+    openOnInit: openOnInit,
+    duration: duration,
+  });
+}
+function handleAccordionClick(event, { btnClass, iconClass }) {
+  const arrowBtn =
+    event.currentTarget.querySelector(btnClass) ||
+    event.target.closest(btnClass);
+  const arrowIcon = event.currentTarget.querySelector(iconClass);
+  if (!arrowBtn) return;
+  const isRotated = arrowBtn.classList.contains('rotated');
+  if (isRotated) {
+    arrowIcon.style.transform = 'rotate(0deg)';
+    arrowBtn.classList.remove('rotated');
+  } else {
+    arrowIcon.style.transform = 'rotate(180deg)';
+    arrowBtn.classList.add('rotated');
+  }
+}
+
+const faqAccordion = document.querySelector('.faq-items');
+const options = {
+  containerClass: '.faq-items',
+  elementClass: 'faq-item',
+  triggerClass: 'faq-title',
+  panelClass: 'faq-descr',
+};
+const clickOptions = {
+  btnClass: '.faq-acordeon-btn',
+  iconClass: '.modal-btn-icon',
+};
+const faqAccordionTriggers = faqAccordion.querySelectorAll('.faq-title');
+faqAccordionTriggers.forEach(accordionTrigger => {
+  accordionTrigger.addEventListener('click', event => {
+    handleAccordionClick(event, clickOptions);
+  });
 });
-const accordion2 = new Accordion('.faq-accordion-container-2', {
-    showMultiple: true,
-    collapse: true,
-});
+createAccordion(options);
