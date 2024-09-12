@@ -53,9 +53,7 @@
   border-radius: 12px;
   transition: background-color 300ms ease-in-out;
 }
-.faq-title:hover {
-  background-color: #242527;
-}
+
 .fit-first-title {
   width: 265px;
 }
