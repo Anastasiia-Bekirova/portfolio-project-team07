@@ -50,7 +50,8 @@
         margin-left: 24px;
         margin-bottom: 64px;
         padding: 12px;
-        fill: #FAFAFA;
+        fill: none;
+        stroke: #FAFAFA;
     }
 
     .benefits-list-items-title {
@@ -91,12 +92,18 @@
         line-height: 1.21;
         letter-spacing: -0.02em;
         color: #FAFAFA;
-        transition: border-color 250ms ease;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        text-shadow cubic-bezier(0.4, 0, 0.2, 1);
+
     }
 
     .order-link:hover,
    .order-link:focus {
+        
         border-color: #fafafa;
+        box-shadow: 0 0 20px #ed3b44;
+        text-shadow: 0 0 12px #fafafa;
     }
 
 /* Планшети (з 768px) */
