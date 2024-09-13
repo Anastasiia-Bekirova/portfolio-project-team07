@@ -134,7 +134,7 @@
   .navigation-menu-btn:hover,
   .navigation-menu-btn:focus {
     color: #e0373f;
-    scale: 1.2;
+    transform: scale(1.2);
   }
   .menu-list {
     display: flex;
@@ -144,19 +144,17 @@
   }
   .menu-list-item {
     color: #fafafa;
-
-    /* Desktop_tablet/Btn_text */
-
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.32px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu-list-item:focus,
   .menu-list-item:hover {
     color: #e0373f;
-    scale: 1.2;
+    transform: scale(1.2);
   }
 
   .burger-btn {
@@ -170,8 +168,6 @@
     gap: 10px;
     margin-bottom: auto;
     color: #fafafa;
-    /* Desktop_tablet/Btn_text */
-
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
