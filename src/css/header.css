@@ -88,10 +88,11 @@
 
 .burger-icon {
   stroke: #fafafa;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .burger-icon:hover,
 .burger-icon:focus {
-  scale: 1.2;
+  transform: scale(1.2);
   stroke: #e0373f;
 }
 
@@ -128,9 +129,7 @@
     background-color: transparent;
     border: none;
     margin-bottom: auto;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .navigation-menu-btn:hover,
   .navigation-menu-btn:focus {
@@ -147,7 +146,7 @@
     color: #fafafa;
 
     /* Desktop_tablet/Btn_text */
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -172,7 +171,7 @@
     margin-bottom: auto;
     color: #fafafa;
     /* Desktop_tablet/Btn_text */
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -180,13 +179,12 @@
     letter-spacing: -0.32px;
     border-radius: 60px;
     background-color: #ed3b44;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .order-btn:hover,
   .order-btn:focus {
     background: #e0373f;
-    scale: 1.2;
+    transform: scale(1.2);
   }
   .order-btn-link {
     width: 164px;
@@ -259,11 +257,12 @@
 }
 .close-icon {
   stroke: #fafafa;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-icon:focus,
 .close-icon:hover {
   stroke: #e0373f;
-  scale: 1.2;
+  transform: scale(1.2);
 }
 
 .backdrop-menu-list {
@@ -276,18 +275,18 @@
 }
 .backdrop-menu-list-item {
   color: #fafafa;
-  
+
   font-size: 16px;
   font-weight: 500;
   line-height: 1.19;
   letter-spacing: -0.02em;
   text-decoration: underline;
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-menu-list-item:focus,
 .backdrop-menu-list-item:hover {
   color: #e0373f;
-  scale: 1.2;
+  transform: scale(1.2);
 }
 .backdrop-order-btn {
   margin-bottom: 64px;
@@ -307,12 +306,11 @@
   font-weight: 500;
   line-height: 1.19;
   letter-spacing: -0.02em;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop-order-btn-link:hover,
 .backdrop-order-btn-link:focus {
-  background: #e0373f;
-  scale: 1.2;
+  background-color: #e0373f;
+  transform: scale(1.2);
 }
